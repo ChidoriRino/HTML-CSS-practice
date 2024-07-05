@@ -235,3 +235,23 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* inputs */
+.input {
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 2rem 4.5rem;
+}
+
+::placeholder {
+  color: #cdcbbc;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
