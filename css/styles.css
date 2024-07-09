@@ -330,6 +330,21 @@ a {
   letter-spacing: 1px;
 }
 
+/* popular badge */
+.plan--popular {
+  position: relative;
+}
+.plan--popular::before {
+  content: url(../images/popular.svg);
+  display: inline-block;
+  /* 設成 inline-block 才可以調整大小 */
+  position: absolute;
+  /* 使用 absolute 需要把 parent 也設成 relative */
+  right: 5%;
+  top: -5.5px;
+  width: 40px;
+}
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
