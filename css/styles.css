@@ -108,7 +108,7 @@ a {
   border-radius: 20px;
   font-size: 2rem;
   font-weight: 600;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   white-space: nowrap;
 }
 
@@ -321,27 +321,47 @@ a {
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
 }
 
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem 2rem 3rem;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__body .list {
+  flex: 1;
 }
 
 .card--primary .card__header {
   background: var(--color-primary);
   color: #fff;
 }
+.card--primary .badge--primary {
+  background: #126de4;
+}
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
 }
 .card--secondary .badge--secondary {
-  background: #02cdf1;
+  background: var(--color-secondary-hover);
 }
 
 /* Plans */
+.plan {
+  min-width: none;
+}
+
 .plan__name {
   color: #fff;
   font-size: 2.4rem;
@@ -378,7 +398,7 @@ a {
   /* 設成 inline-block 才可以調整大小 */
   position: absolute;
   /* 使用 absolute 需要把 parent 也設成 relative */
-  right: 5%;
+  right: 60px;
   top: -5.5px;
   width: 40px;
 }
@@ -395,6 +415,11 @@ a {
   }
   .plan__description {
     font-size: 1.7rem;
+  }
+  .plan--popular::before {
+    right: 40px;
+    top: -4px;
+    width: calc(40px / 1.4);
   }
 }
 
@@ -743,5 +768,42 @@ a {
 @media screen and (min-width: 1024px) {
   .block-domain__prices {
     font-size: 1.5rem;
+  }
+}
+
+/* Plan Block */
+.block-plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-plan .plan {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 3rem 3rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-plan {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .block-plan .plan {
+    transition: transform 0.2s;
+    padding: 0 2rem 3rem;
+  }
+
+  .block-plan .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .block-plan .plan:hover {
+    transform: scale(1.05);
+  }
+
+  .block-plan .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
