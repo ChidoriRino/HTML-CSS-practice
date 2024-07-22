@@ -807,3 +807,31 @@ a {
     transform: scale(1.15);
   }
 }
+
+/* Features Block */
+
+.features {
+  gap: 4rem 2rem;
+}
+.features__media {
+  flex-direction: column;
+  justify-self: center;
+}
+
+.features__media .media__image {
+  padding-bottom: 2rem;
+}
+
+.features__media .icon-container {
+  transform: scale(1.2) translateX(6px);
+}
+
+.features__media .media__body {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.features__img {
+  align-self: center;
+  width: 100%;
+}
