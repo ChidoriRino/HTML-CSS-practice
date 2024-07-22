@@ -812,6 +812,10 @@ a {
 
 .features {
   gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+.features:first-of-type {
+  margin-top: 6rem;
 }
 .features__media {
   flex-direction: column;
@@ -834,4 +838,10 @@ a {
 .features__img {
   align-self: center;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .features:nth-of-type(even) .features__media {
+    order: 2;
+  }
 }
