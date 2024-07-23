@@ -1,21 +1,12 @@
-/* Grids */
-.grid {
-  display: grid;
-}
-
-@media screen and (min-width: 768px) {
-  .grid--1x2 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.image__resize {
-  position: relative;
+.media {
   display: flex;
-  justify-content: center;
 }
-
-.image__resize > img {
-  width: 80%;
-  object-fit: cover;
+.media__image {
+  margin-top: 1.5rem;
+}
+.media__body {
+  margin: 0 2rem;
+}
+.media__title {
+  margin-top: 0;
 }
