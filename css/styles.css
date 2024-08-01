@@ -145,7 +145,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -214,7 +213,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   height: 6rem;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
@@ -302,6 +301,7 @@ a {
   border: 0;
   flex-grow: 1;
   min-width: 0;
+  width: 0;
 }
 .input-group .input-left {
   padding: 1.5rem 3rem;
@@ -755,14 +755,20 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
 }
 
+@media screen and (min-width: 400px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -818,7 +824,7 @@ a {
 
 .features {
   gap: 4rem 2rem;
-  margin: 12rem 0;
+  margin: 6rem 0;
 }
 .features:first-of-type {
   margin-top: 6rem;
