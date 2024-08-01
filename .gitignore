@@ -2,3 +2,6 @@ logs/
 main.log
 *.log
 normalize.css
+node_modules/
+dist/
+.parcel-cache/
